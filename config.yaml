@@ -8,3 +8,5 @@ adam_optimizer_config:
   weight_decay: 0.001
 num_batch_norm_layers_to_train_params: 0
 num_batch_norm_layers_to_update_running_stats: 0
+train_earlier_layers_delay: 5
+n_hidden_layers_to_train: 20
