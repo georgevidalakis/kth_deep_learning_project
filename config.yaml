@@ -10,3 +10,9 @@ num_batch_norm_layers_to_train_params: 0
 num_batch_norm_layers_to_update_running_stats: 0
 train_earlier_layers_delay: 5
 n_hidden_layers_to_train: 20
+# Parameters for the pseudo label learning
+use_pseudo_labelling: 1
+labelled_data_ratio: 0.1
+T_1: 20
+T_2: 8
+ALPHA_F: 3
