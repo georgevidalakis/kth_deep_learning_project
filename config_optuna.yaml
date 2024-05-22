@@ -1,0 +1,34 @@
+device: cuda:0
+num_classes: 37
+batch_size: 32
+max_num_epochs: 40
+patience: 10
+# adam_optimizer_config:
+#   lr: 0.001
+#   weight_decay: 0.001
+# num_batch_norm_layers_to_train_params: 0
+# num_batch_norm_layers_to_update_running_stats: 0
+# train_earlier_layers_delay: 50
+# n_hidden_layers_to_train: 45
+last_layers_training_configs:
+  - 0:
+    unfreeze_epoch: 0
+    lr: 0.001
+    weight_decay: 0.001
+    use_train_mode: True
+  - 1:
+    unfreeze_epoch: 3
+    lr: 0.0001
+    weight_decay: 0.01
+    use_train_mode: True
+  - 2:
+    unfreeze_epoch: 6
+    lr: 0.0001
+    weight_decay: 0.01
+    use_train_mode: True
+# Parameters for the pseudo label learning
+use_pseudo_labelling: 1
+labelled_data_ratio: 0.1
+T_1: 20
+T_2: 8
+ALPHA_F: 3
