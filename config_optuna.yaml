@@ -32,3 +32,4 @@ labelled_data_ratio: 0.1
 T_1: 20
 T_2: 8
 ALPHA_F: 3
+unlabelled_batch_size: 64
