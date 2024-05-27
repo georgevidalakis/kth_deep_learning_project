@@ -1,14 +1,18 @@
 device: cuda:0
 num_classes: 37
-batch_size: 32
-max_num_epochs: 20
-patience: 5
+batch_size: 64
+max_num_epochs: 400
+patience: 50
 adam_optimizer_config:
   lr: 0.001
-  weight_decay: 0.001
+  weight_decay: 0.0001
 num_batch_norm_layers_to_train_params: 0
 num_batch_norm_layers_to_update_running_stats: 0
-train_earlier_layers_delay: 5
-n_hidden_layers_to_train: 20
+train_earlier_layers_delay: 180
+n_hidden_layers_to_train: 40
 # Parameters for the pseudo label learning
 labelled_data_ratio: 0.1
+ema_decay: 0.999
+alpha: 0.4
+lambda_u: 86
+lambda_u_epoch_max: 100
