@@ -1,6 +1,6 @@
-device: cuda:0
+device: cuda
 num_classes: 37
-batch_size: 64
+batch_size: 16
 max_num_epochs: 400
 patience: 50
 adam_optimizer_config:
